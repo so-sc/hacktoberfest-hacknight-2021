@@ -1,0 +1,19 @@
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/variables.scss';
+@import '../../styles/base/base.scss';
+
+.counterBackground {
+  background-color: $light-green;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .counterText {
+    color: $background;
+
+    thin {
+      font-weight: 300;
+    }
+  }
+}

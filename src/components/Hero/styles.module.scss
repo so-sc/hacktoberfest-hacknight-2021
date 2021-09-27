@@ -1,0 +1,21 @@
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/variables.scss';
+@import '../../styles/base/base.scss';
+
+.heroBackground {
+  height: 100vh;
+  background-color: $background;
+
+  .heading {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .headingText {
+      font-size: 8rem;
+      font-weight: 900;
+      color: $orange;
+    }
+  }
+}
