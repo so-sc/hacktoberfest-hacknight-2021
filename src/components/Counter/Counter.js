@@ -5,7 +5,7 @@ const Counter = () => {
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
 
-    const difference = +new Date(`10/17/${year}`) - +new Date();
+    const difference = +new Date(`10/15/${year}`) - +new Date();
 
     let timeLeft = {};
 
