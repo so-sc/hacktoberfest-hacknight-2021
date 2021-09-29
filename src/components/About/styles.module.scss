@@ -3,23 +3,25 @@
 @import '../../styles/base/base.scss';
 
 .about {
-    background-color: $lighter-green;
-    color: $dark-green;
+  background-color: $lighter-green;
+  color: $dark-green;
+  padding: 10rem 0;
 
-    h1 {
-        font-size: 5rem;
+  h1 {
+    font-size: 5rem;
+  }
+
+  .content {
+    display: flex;
+
+    p {
+      font-size: 2.2rem;
+      text-align: justify;
+
+      a {
+        text-decoration: none;
+        color: $dark-green;
+      }
     }
-
-    .content {
-        display: flex;
-
-        p {
-            font-size: 2rem;
-            
-            a {
-                text-decoration: none;
-                color: $dark-green;
-            }
-        }
-    }
+  }
 }
