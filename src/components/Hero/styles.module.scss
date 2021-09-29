@@ -8,6 +8,10 @@
   justify-content: space-between;
   align-items: center;
 
+  .svg {
+    z-index: -1;
+  }
+
   .heading {
     height: 100%;
     display: flex;
