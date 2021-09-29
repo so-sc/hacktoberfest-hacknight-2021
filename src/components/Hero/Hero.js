@@ -10,9 +10,13 @@ const Hero = () => {
       </div>
       <Container>
         <div className={styles.heading}>
-          <img src={require('../../assets/logo.svg').default} alt="logo" />
+          <div className={styles.logo}><img src={require('../../assets/logo.svg').default} alt="logo" /></div>
           <h1> 15 OCT - 17 OCT </h1>
-          <a href="/"> REGISTER </a>
+          <div className={styles.register}>
+            <img className={styles.left} src={require('../../assets/small-flower.svg').default} alt="small-flower" />
+            <a href="/"> REGISTER </a>
+            <img className={styles.right} src={require('../../assets/small-flower.svg').default} alt="small-flower" />
+          </div>
           {/* <h1 className={styles.headingText}>Hacktoberfest Hacknight</h1> */}
         </div>
       </Container>

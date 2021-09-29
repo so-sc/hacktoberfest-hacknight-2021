@@ -9,16 +9,18 @@
     height: 100px;
 
     ul {
-        width: 1000px;
+        width: 400px;
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         
         li {
             list-style: none;
+            padding: 0px 10px;
         }
 
         a {
-            font-size: 2rem;
+            font-size: 1.7rem;
             font-weight: 1000;
             text-decoration: none;
             color: $dark-green;
