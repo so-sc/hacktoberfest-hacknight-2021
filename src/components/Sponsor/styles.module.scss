@@ -9,12 +9,15 @@
     margin: 100px 0px;
     padding: 50px 100px;
     // position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    // .flower {
-    //     position: absolute;
-    //     // left: 500px;
-    //     // top: -100px;
-    // }
+    .flower {
+        width: 100px;
+        margin-top: -100px;
+    }
 
     h1 {
         font-size: 4rem;
@@ -29,7 +32,6 @@
         justify-content: center;
         align-items: center;
         
-
         li {
             list-style: none;
             padding: 20px;

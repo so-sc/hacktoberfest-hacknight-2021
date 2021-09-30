@@ -14,7 +14,8 @@ const Hero = () => {
       <Container>
         <div className={styles.heading}>
           <div className={styles.logo}><img src={require('../../assets/logo.svg').default} alt="logo" /></div>
-          <h1> 22 OCT - 24 OCT </h1>
+          <h1> HackNight </h1>
+          <h2> 22 OCT - 24 OCT </h2>
           <div className={styles.register}>
             <img className={styles.left} src={require('../../assets/small-flower.svg').default} alt="small-flower" />
             <a href="/"> REGISTER </a>

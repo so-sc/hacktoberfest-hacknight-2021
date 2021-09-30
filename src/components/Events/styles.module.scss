@@ -1,0 +1,88 @@
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/variables.scss';
+@import '../../styles/base/base.scss';
+
+.events {
+    h1 {
+        background-color: $light-green;
+        color: $dark-green;
+        font-size: 4rem;
+        text-align: center;
+        padding: 40px 0px 150px;
+    }
+    
+    ul {
+        margin-top: -120px;
+        display: flex;
+
+        @include respond(lg) {
+            flex-direction: column;
+        }
+
+        // .li {
+        //     list-style: none;
+        // }
+        
+        li {
+            padding: 50px 30px;
+            flex: 1;
+            list-style: none;
+            color: $background;
+            // max-width: 400px;
+            // background-color: $dark-green;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                h2 {
+                    color: $lighter-green;
+                    font-size: 3rem;
+                }
+                
+                h3 {
+                    color: $lighter-green;
+                    font-weight: 100;
+                    font-size: 1.8rem;
+                }
+    
+                .description {
+                    margin-top: 40px;
+                    color: $background;
+                    font-size: 2rem;
+                    text-align: justify;
+                    font-weight: 100;
+                }
+            }
+
+            .speaker{
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                
+                .square {
+                    width: 50px;
+                    height: 50px;
+                    object-fit: contain;
+                    margin-right: 20px;
+
+                    img {
+                        border-radius: 100%;
+                        width: 50px;   
+                    }
+                }
+
+                p {
+                    color: $background;
+                    font-size: 2rem;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+}

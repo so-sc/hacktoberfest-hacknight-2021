@@ -7,7 +7,7 @@ const Sponsor = () => {
   return (
     <Container>
       <div className={styles.sponsors}>
-        {/* <img className={styles.flower} src={require('../../assets/small-flower.svg').default} alt="small-flower" /> */}
+        <img className={styles.flower} src={require('../../assets/small-flower.svg').default} alt="small-flower" />
         {/* <a className={styles.sponsorBtn} href="/"><h2>Sponsor Us</h2></a> */}
         <h1>Our Previous Sponsors</h1>
 
