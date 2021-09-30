@@ -7,7 +7,7 @@ const Stats = () => {
         <Container>
             <img className={styles.branch} src={require('../../assets/random-branch.svg').default} alt="branch" />
             <div className={styles.stats}>
-                <h1>Our HackNight Stats</h1>
+                <h1>OUR HACKNIGHT STATS!</h1>
                 <img src={require('../../assets/hacknight-stats.svg').default} alt="hacknight-stats" />
             </div>
         </Container>

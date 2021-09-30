@@ -5,22 +5,52 @@
 .about {
   background-color: $lighter-green;
   color: $dark-green;
-  padding: 10rem 0;
+  padding: 10rem 5rem;
+
+  @include respond(sm) {
+    padding: 10rem 0rem;  
+  }
 
   h1 {
     font-size: 5rem;
+    margin-bottom: 3rem;
   }
 
   .content {
     display: flex;
+    justify-content: space-between;
+    // align-items: center;
 
     p {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       text-align: justify;
+      flex: 2;
+      padding-right: 8rem;
+
+      @include respond(md) {
+        padding-right: 0rem;
+      }
 
       a {
         text-decoration: none;
         color: $dark-green;
+      }
+    }
+
+    .image {
+      flex: 1;
+      display: flex;
+      // justify-content: right;
+      // align-items: center;
+      
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      @include respond(md) {
+        display: none;
       }
     }
   }

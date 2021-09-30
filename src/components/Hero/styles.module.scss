@@ -5,16 +5,24 @@
 
 
 .heroSection {
-  height: 80vh;
+  height: 85vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // padding-bottom: 50px;
+  padding-bottom: 100px;
 
   .svg {
     z-index: -1;
-    // width: 20%;
     
+    .left{
+      transform: rotate(180deg);
+    }
+    // img {
+    //   // object-fit: contain;
+    //   // height: 200%;
+    // }
+
+
     @include respond(md) { // or maybe do md 
       display: none;
       // width: 1rem;
@@ -108,15 +116,7 @@
       align-items: center;
       transition: all .2s;
 
-      a:hover {
-        // box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        // box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
-        transform: scale(1.2);
-        // scale: 1.2;
-        background-color: aliceblue;
-      }
-
-      @include respond(md) { // or maybe do md 
+      @include respond(sm) { // or maybe do md 
         width: 150px;
         height: 40px;
         // background-color: aquamarine;

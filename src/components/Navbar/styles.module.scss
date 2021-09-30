@@ -8,6 +8,10 @@
     align-items: center;
     height: 100px;
 
+    @include respond (xs) {
+        height: 70px;
+    }
+
     ul {
         width: 400px;
         display: flex;

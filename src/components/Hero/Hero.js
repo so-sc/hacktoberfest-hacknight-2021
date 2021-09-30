@@ -7,7 +7,8 @@ const Hero = () => {
     <div className={styles.heroSection}>
       <div className={styles.svg}>
         <img
-          src={require('../../assets/hero-left.svg').default}
+          className={styles.left}
+          src={require('../../assets/hero-side.svg').default}
           alt='left-svg'
         />
       </div>
@@ -26,7 +27,8 @@ const Hero = () => {
       </Container>
       <div className={styles.svg}>
         <img
-          src={require('../../assets/hero-right.svg').default}
+          className={styles.right}
+          src={require('../../assets/hero-side.svg').default}
           alt='right-svg'
         />
       </div>
