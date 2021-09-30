@@ -8,7 +8,7 @@ const EventCard = ({item, index}) => {
 	let color = index%2?'#677662':'#2B3531'
 
 	return (
-		<li key={index} style={{backgroundColor: color}}>
+		<li style={{backgroundColor: color}}>
 			<div className={styles.content}>
 				<h2>{item.title}</h2>
 				<h3>{item.date}</h3>
@@ -32,7 +32,7 @@ const Events = () => {
 				<ul>
 					{eventList.map((item, index) => {
 						return (
-							<EventCard item={item} index={index}/>
+							<EventCard item={item} index={index} key={index}/>
 						);
 					})}
 				</ul>
