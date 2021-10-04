@@ -31,7 +31,7 @@ const About = () => {
             positive contributions to an ever-growing community. All backgrounds
             and skills levels are encouraged to complete the challenge.
           </p>
-          <div>
+          <div className={styles.image}>
             <img
               src={require('../../assets/hackathon.png').default}
               alt='hackathon'

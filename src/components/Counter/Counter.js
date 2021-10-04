@@ -5,7 +5,7 @@ const Counter = () => {
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
 
-    const difference = +new Date(`10/15/${year}`) - +new Date();
+    const difference = +new Date(`10/22/${year}`) - +new Date();
 
     let timeLeft = {};
 
@@ -33,15 +33,15 @@ const Counter = () => {
 
   const timerComponents = [];
 
-  Object.keys(timeLeft).forEach((interval) => {
+  Object.keys(timeLeft).forEach((interval, index) => {
     if (!timeLeft[interval]) {
       return;
     }
 
     timerComponents.push(
-      <span>
+      <span key={index}>
         {timeLeft[interval]}
-        <thin>{interval}</thin>{' '}
+        <span className={styles.thin}>{interval}</span>{' '}
       </span>
     );
   });
@@ -49,7 +49,7 @@ const Counter = () => {
   return (
     <div className={styles.counterBackground}>
       <h1 className={styles.counterText}>
-        Hacktoberfest <thin>starts in </thin>
+        Hacktoberfest <span className={styles.thin}>starts in </span>
         {timerComponents.length ? timerComponents : <span>Event Started!</span>}
       </h1>
     </div>

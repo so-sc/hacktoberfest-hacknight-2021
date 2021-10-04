@@ -7,21 +7,28 @@ const Hero = () => {
     <div className={styles.heroSection}>
       <div className={styles.svg}>
         <img
-          src={require('../../assets/hero-left.svg').default}
+          className={styles.left}
+          src={require('../../assets/hero-side.svg').default}
           alt='left-svg'
         />
       </div>
       <Container>
         <div className={styles.heading}>
-          <img src={require('../../assets/logo.svg').default} alt='logo' />
-          <h1> 15 OCT - 17 OCT </h1>
-          <a href='/'> REGISTER </a>
+          <div className={styles.logo}><img src={require('../../assets/logo.svg').default} alt="logo" /></div>
+          <h1> HackNight </h1>
+          <h2> 22 OCT - 24 OCT </h2>
+          <div className={styles.register}>
+            <img className={styles.left} src={require('../../assets/small-flower.svg').default} alt="small-flower" />
+            <a href="/"> REGISTER </a>
+            <img className={styles.right} src={require('../../assets/small-flower.svg').default} alt="small-flower" />
+          </div>
           {/* <h1 className={styles.headingText}>Hacktoberfest Hacknight</h1> */}
         </div>
       </Container>
       <div className={styles.svg}>
         <img
-          src={require('../../assets/hero-right.svg').default}
+          className={styles.right}
+          src={require('../../assets/hero-side.svg').default}
           alt='right-svg'
         />
       </div>

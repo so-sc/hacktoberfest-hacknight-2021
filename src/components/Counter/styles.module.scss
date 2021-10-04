@@ -11,8 +11,9 @@
 
   .counterText {
     color: $background;
+    text-align: center;
 
-    thin {
+    .thin {
       font-weight: 300;
     }
   }
