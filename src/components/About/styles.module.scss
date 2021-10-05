@@ -8,7 +8,7 @@
   padding: 10rem 5rem;
 
   @include respond(sm) {
-    padding: 10rem 0rem;  
+    padding: 10rem 0rem;
   }
 
   h1 {
@@ -17,15 +17,21 @@
   }
 
   .content {
-    display: flex;
-    justify-content: space-between;
-    // align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8rem;
+
+    @include respond(lg) {
+      grid-template-columns: 1fr 0.5fr;
+    }
+
+    @include respond(md) {
+      grid-template-columns: 1fr;
+    }
 
     p {
       font-size: 2.4rem;
       text-align: justify;
-      flex: 2;
-      padding-right: 8rem;
 
       @include respond(md) {
         padding-right: 0rem;
@@ -38,19 +44,23 @@
     }
 
     .image {
-      flex: 1;
       display: flex;
+
+      @include respond(md) {
+        justify-content: center;
+      }
+
       // justify-content: right;
       // align-items: center;
-      
+
       img {
         width: 100%;
         object-fit: cover;
         border-radius: 15px;
-      }
 
-      @include respond(md) {
-        display: none;
+        @include respond(md) {
+          width: 80%;
+        }
       }
     }
   }

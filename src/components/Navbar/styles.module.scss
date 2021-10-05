@@ -2,37 +2,41 @@
 @import '../../styles/abstract/variables.scss';
 @import '../../styles/base/base.scss';
 
-.navbar{
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+
+  @include respond(xs) {
+    height: 70px;
+  }
+
+  ul {
+    width: 600px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
-    @include respond (xs) {
-        height: 70px;
+    @include respond(md) {
+      width: 400px;
     }
 
-    ul {
-        width: 400px;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        
-        li {
-            list-style: none;
-            padding: 0px 10px;
-        }
-
-        a {
-            font-size: 1.7rem;
-            font-weight: 1000;
-            text-decoration: none;
-            color: $dark-green;
-            transition: all 0.5s ease 0s;
-        }
-        
-        a:hover {
-            color: $orange;
-        }
+    li {
+      list-style: none;
+      padding: 0px 10px;
     }
+
+    a {
+      font-size: 1.7rem;
+      font-weight: 1000;
+      text-decoration: none;
+      color: $dark-green;
+      transition: all 0.5s ease 0s;
+    }
+
+    a:hover {
+      color: $orange;
+    }
+  }
 }

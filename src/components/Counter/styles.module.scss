@@ -13,6 +13,10 @@
     color: $background;
     text-align: center;
 
+    @include respond(xs) {
+      font-size: 1.4rem;
+    }
+
     .thin {
       font-weight: 300;
     }
