@@ -3,7 +3,6 @@
 @import '../../styles/base/base.scss';
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 
-
 .heroSection {
   height: 85vh;
   display: flex;
@@ -13,17 +12,18 @@
 
   .svg {
     z-index: -1;
-    
-    .left{
+
+    .left {
+      max-width: 100%;
       transform: rotate(180deg);
     }
-    // img {
-    //   // object-fit: contain;
-    //   // height: 200%;
-    // }
 
+    .right {
+      max-width: 100%;
+    }
 
-    @include respond(md) { // or maybe do md 
+    @include respond(md) {
+      // or maybe do md
       display: none;
       // width: 1rem;
       // img {
@@ -55,7 +55,8 @@
 
     .logo {
       padding: 0px 100px;
-      @include respond(sm) { // or maybe do md 
+      @include respond(sm) {
+        // or maybe do md
         padding: 0px 50px;
       }
     }
@@ -83,7 +84,8 @@
       img {
         max-width: 60px;
 
-        @include respond(xs) { // or maybe do md 
+        @include respond(xs) {
+          // or maybe do md
           display: none;
         }
       }
@@ -96,7 +98,6 @@
       .right {
         transform: rotate(90deg);
       }
-
     }
 
     a {
@@ -114,14 +115,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: all .2s;
+      transition: all 0.2s;
 
-      @include respond(sm) { // or maybe do md 
+      @include respond(sm) {
+        // or maybe do md
         width: 150px;
         height: 40px;
         // background-color: aquamarine;
       }
-
     }
   }
 }
