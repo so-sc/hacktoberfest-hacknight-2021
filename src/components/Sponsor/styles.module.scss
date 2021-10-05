@@ -3,42 +3,56 @@
 @import '../../styles/base/base.scss';
 
 .sponsors {
+  background-color: $light-green;
+  border-radius: 15px;
+  margin: 15rem 0rem 10rem;
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    background-color: $light-green;
-    border-radius: 15px;
-    margin: 15rem 0rem 10rem;
-    padding: 50px 100px;
-    // position: absolute;
+  @include respond(md) {
+    padding: 50px 0px;
+  }
+
+  .flower {
+    width: 100px;
+    margin-top: -100px;
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: $background;
+    text-align: center;
+    margin-bottom: 50px;
+
+    @include respond(md) {
+      font-size: 3rem;
+    }
+  }
+
+  .sponsorItem {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
-    .flower {
-        width: 100px;
-        margin-top: -100px;
+    li {
+      list-style: none;
+      padding: 20px;
+
+      @include respond(md) {
+        padding: 15px;
+      }
     }
 
-    h1 {
-        font-size: 4rem;
-        color: $background;
-        text-align: center;
-        margin-bottom: 50px;
-    }
+    img {
+      width: 150px;
 
-    .sponsorItem {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        
-        li {
-            list-style: none;
-            padding: 20px;
-        }
-    
-        img {
-            width: 150px;        
-        }
+      @include respond(md) {
+        width: 80px;
+      }
     }
+  }
 }
