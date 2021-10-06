@@ -1,0 +1,67 @@
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/variables.scss';
+@import '../../styles/base/base.scss';
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+    @include respond(md) {
+        height: 70vh;
+    }
+
+    .innerContainer {
+        width: 100%;
+        max-width: 900px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
+
+        h1 {
+            font-size: 4rem;
+            color: $dark-green;
+            padding-bottom: 1rem;
+        }
+
+        label {
+            // width: 100%;
+            display: flex;
+            flex-direction: column;
+            font-size: 2rem;
+            padding: 5px;
+
+            input {
+                border: solid 3px $dark-green;
+                border-radius: 10px;
+                height: 4.3rem;
+                padding: 5px;
+            }
+        }
+
+        .submit {
+            // padding: 5px;
+            margin: 5px;
+            padding: 1rem 0rem;
+            
+            :hover {
+                cursor: pointer;
+            }
+
+            input {
+                height: 5rem;
+                border-radius: 10px;
+                border: none;
+                background-color: $orange;
+                width: 100%;
+                font-weight: 2rem;
+                font-size: 2rem;
+                color: $background;
+            }
+
+
+        }
+    }
+}
