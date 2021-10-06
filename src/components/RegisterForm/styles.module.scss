@@ -8,9 +8,9 @@
     align-items: center;
     height: 80vh;
 
-    @include respond(md) {
-        height: 80vh;
-    }
+    // @include respond(md) {
+    //     height: 80vh;
+    // }
 
     .innerContainer {
         width: 100%;
