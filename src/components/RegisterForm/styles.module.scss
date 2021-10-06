@@ -9,7 +9,7 @@
     height: 80vh;
 
     @include respond(md) {
-        height: 70vh;
+        height: 80vh;
     }
 
     .innerContainer {
@@ -59,6 +59,7 @@
                 font-weight: 2rem;
                 font-size: 2rem;
                 color: $background;
+                border: solid 4px $dark-orange;
             }
 
 
