@@ -21,7 +21,11 @@ const RegisterForm = () => {
 		<Container>
 			<form className={styles.form} onSubmit={handleSubmit}>
 				<div className={styles.innerContainer}>
-					<h1>Register Now!</h1>
+					<div className={styles.heading}>
+						<img className={styles.left} src={require('../../assets/small-flower.svg').default} alt="small-flower" />
+						<h1>Register Now!</h1>
+						<img className={styles.right} src={require('../../assets/small-flower.svg').default} alt="small-flower" />
+					</div>
 					<label>
 						Name:
 						<input 
