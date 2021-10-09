@@ -6,12 +6,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-
-  @include respond(xs) {
-    height: 70px;
-  }
-
+  height: 10rem;
+  
   ul {
     width: 600px;
     display: flex;
