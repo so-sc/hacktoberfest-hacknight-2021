@@ -6,24 +6,58 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    // min-height: 100%;
+    height: 60vh;
 
-    // @include respond(md) {
-    //     height: 80vh;
-    // }
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        h1 {
+            margin: 0px 3rem;
+
+            @include respond(sm) {
+                margin: 0px;
+            }
+        }
+
+        img {
+            max-width: 65px;
+            
+            @include respond(md) {
+                max-width: 45px;
+            }
+
+            @include respond(sm) {
+                display: none;
+            }
+
+        }
+    
+        .left {
+            transform: rotate(-90deg);
+        }
+    
+        .right {
+            transform: rotate(90deg);
+        }
+    }
+    
 
     .innerContainer {
         width: 100%;
         max-width: 900px;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // flex-direction: column;
+        padding: 5rem;
+        
+        @include respond(sm) {
+            padding: 0px 0px 3rem 0px;
+        }
 
         h1 {
             font-size: 4rem;
             color: $dark-green;
-            padding-bottom: 1rem;
         }
 
         label {
@@ -32,6 +66,10 @@
             flex-direction: column;
             font-size: 2rem;
             padding: 5px;
+
+            @include respond(sm) {
+                padding: 2px;
+            }
 
             input {
                 border: solid 3px $dark-green;
@@ -59,10 +97,89 @@
                 font-weight: 2rem;
                 font-size: 2rem;
                 color: $background;
-                border: solid 4px $dark-orange;
+            }
+        }
+    }
+
+    .popup {
+        display: none; /* Hidden by default */
+        justify-content: center;
+        align-items: center;
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100vh; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        // background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        
+
+        .content {
+            background-color: $light-green;
+            border: solid $dark-green 5px;
+            border-radius: 15px;
+            color: $dark-green;
+            padding: 20px;
+            font-size: 2.5rem;
+            font-weight: 100;
+
+            max-width: 30rem;
+            max-height: 30rem;
+            width: 100%;
+            height: 100%;
+            // width: 80%; /* Could be more or less, depending on screen size */
+
+            .message {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                height: 100%;
+
+                p {
+                    text-align: center;
+                }   
+            
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+                    color: $background;
+                    text-align: center;
+                    background-color: $orange;
+                    text-decoration: none;
+                    padding: 1rem 2rem;
+                    // min-width: 100px;
+                    height: 50px;
+                }
+            }
+            
+            img {
+                width: 10rem;
             }
 
+            .flower {
+                width: 7rem;
+                margin-top: -7rem;
+            }
 
+            .close {
+                margin-top: -10px;
+                color: $background;
+                float: right;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+              
+            .close:hover,
+            .close:focus {
+                color: $dark-green;
+                text-decoration: none;
+                cursor: pointer;
+            }
         }
     }
 }
