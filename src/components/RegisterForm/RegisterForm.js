@@ -1,43 +1,52 @@
-import { React, useState } from 'react';
+// import axios from 'axios';
+// import { React, useState } from 'react';
 import Container from '../Container/Container';
 import styles from './styles.module.scss';
+// const { REACT_APP_API } = process.env;
 
 const RegisterForm = () => {
 
-	const [inputs, setInputs] = useState("");
+	// const [inputs, setInputs] = useState("");
 	
-	const handleChange = (event) => {
-		const name = event.target.name;
-		const value = event.target.value;
-		setInputs(values => ({ ...values, [name]: value }))
-	}
+	// const handleChange = (event) => {
+	// 	const name = event.target.name;
+	// 	const value = event.target.value;
+	// 	const e = value.length < 1 ? 'do not small ': '';
+	// 	setInputs(values => ({ ...values, [name]: value }));	
+	// }
 	
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		console.log(inputs);
+	// const handleSubmit = (event) => {
+	// 	event.preventDefault();
+	// 	console.log(inputs);
+
+	// 	axios.post(`${REACT_APP_API}/create/individual`, inputs)
+    //     .then( response => console.log(response))
+    //     .catch( error => console.log(error))
 		
-		//popup
-		let popup = document.getElementById('popup');
-		// if the data is stored and everything is validated then show pop up
-		popup.style.display = 'flex';
+	// 	//popup
+	// 	let popup = document.getElementById('popup');
+	// 	// if the data is stored and everything is validated then show pop up
+	// 	popup.style.display = 'flex';
 		
-	}
+	// }
 	
-	const closePopup = () => {
-		let popup = document.getElementById('popup');
-		popup.style.display = 'none';
-	}
+	// // const closePopup = () => {
+	// // 	let popup = document.getElementById('popup');
+	// // 	popup.style.display = 'none';
+	// // }
 
 	return (
 		<Container>
-			<form className={styles.form} onSubmit={handleSubmit}>
+			<form className={styles.form} 
+			// onSubmit={handleSubmit}
+			>
 				<div className={styles.innerContainer}>
 					<div className={styles.heading}>
 						<img className={styles.left} src={require('../../assets/small-flower.svg').default} alt="small-flower" />
-						<h1>Register Now!</h1>
+						<h1>Starting Tomorrow!</h1>
 						<img className={styles.right} src={require('../../assets/small-flower.svg').default} alt="small-flower" />
 					</div>
-					<label>
+					{/* <label>
 						Name:
 						<input
 							type="text"
@@ -102,20 +111,12 @@ const RegisterForm = () => {
 					</label>
 					<div className={styles.submit}>
 						<input type="submit" value="SUBMIT!" />
-					</div>
+					</div> */}
+
 				</div>
 
 				{/* popup */}
-				<div id="popup" className={styles.popup}>
-					<div className={styles.content}>
-						<span className={styles.close} onClick={closePopup}>&times;</span>
-						<div className={styles.message}>
-							<img src={require('../../assets/checkmark.svg').default} alt="checkmark" />
-							<p>Registered Successfully 🎉</p>
-							<a href="/" className={styles.button}>Continue</a>
-						</div>
-					</div>
-				</div>
+				
 
 			</form>
 		</Container>
