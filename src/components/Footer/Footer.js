@@ -11,7 +11,7 @@ const Footer = () => {
           <div className={styles.container}>
             <div className={styles.coloumn}>
               <a href="https://instagram.com/sosc.sahyadri">Instagram</a>
-              <a href="https://twitter.com/sahyadri_osc">Twitter</a>
+              <a href="https://discord.gg/2Dph95fvZW">Discord</a>
               <a href="https://github.com/so-sc">GitHub</a>
               <a href="https://linkedin.com/company/sosc-sahyadri">LinkedIn</a>
               <a href="https://www.youtube.com/channel/UCk8nlSMwUT-jhEtamMF-V-w">YouTube</a>
