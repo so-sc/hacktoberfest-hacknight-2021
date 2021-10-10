@@ -109,6 +109,7 @@
 
     .popup {
         // display: none; /* Hidden by default */
+        display: flex;
         justify-content: center;
         align-items: center;
         position: fixed; /* Stay in place */
@@ -121,6 +122,10 @@
         // background-color: rgb(0,0,0); /* Fallback color */
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         
+        @include respond(xs) {
+            padding: 2rem;
+            
+        }
 
         .content {
             position: relative;
@@ -156,6 +161,11 @@
                 p {
                     font-size: 1.2rem;
                 }
+
+                .errMsg {
+                    font-size: 1.6rem;
+                    font-weight: 800;
+                }    
             
                 a {
                     display: flex;
@@ -179,6 +189,30 @@
                 //     filter: drop-shadow(rgba(0, 0, 0, 0.35) 0px 3px 7px);
                     // scale: 1.1;
                     transform: scale(1.08);
+                }
+
+                .resgistrationID{
+                    font-weight: 800;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    margin: 0 auto;
+                    justify-content: center;
+
+                    img{
+                        width: 15px;
+                        margin-left: 5px;
+                    }
+
+                    @include respond(xs) {
+                        font-size: 1rem;
+                        // width: 15px;
+
+                        img {
+                            width: 15px;
+                        }
+                    }
                 }
             }
             

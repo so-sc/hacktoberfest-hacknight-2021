@@ -10,16 +10,19 @@ const RegisterForm = () => {
     status: false,
     message : ''
   });
-  const [successMsg, setSuccessMsg] = useState(false);
+  const [successMsg, setSuccessMsg] = useState({
+    status: false,
+    id: ''
+  });
 
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
     college: "",
-    phnNumber: "",
+    phone: "",
     year: "",
-    discordId: "",
-    githubId: "",
+    discordUsername: "",
+    githubUsername: "",
   });
 
   const handleSubmit = (event) => {
@@ -30,16 +33,18 @@ const RegisterForm = () => {
     .post(`${REACT_APP_API}/create/individual`, inputs)
     .then((response) => {
       console.log(response);
-      // if success
-      // setSuccessMsg(true);
-  
-      // if false
-      // setErrMsg({
-      //   status: true,
-      //   message: "Something went wrong"
-      // });
+      setSuccessMsg({
+        status: true,
+        id: response.data.id
+      });
       })
-      .catch((error) => console.log(error));
+    .catch((error) => {
+      console.log(error);
+      setErrMsg({
+        status: true,
+        message: error.response.data.message
+      });
+    });
   };
 
   const closePopup = () => {
@@ -107,13 +112,13 @@ const RegisterForm = () => {
             Phone Number:
             <input
               type="tel"
-              name="phNumber"
-              value={inputs.phNumber}
+              name="phone"
+              value={inputs.phone}
               required={true} // add this to everything except for the Github
               onChange={(v) => {
                 setInputs((values) => ({
                   ...values,
-                  phnNumber: v.target.value,
+                  phone: v.target.value,
                 }));
               }}
             />
@@ -136,15 +141,15 @@ const RegisterForm = () => {
             Discord Username:
             <input
               type="text"
-              name="discordId"
-              value={inputs.discordId}
+              name="discordUsername"
+              value={inputs.discordUsername}
               placeholder={"username#1234"}
               pattern="[A-Za-z]*#[0-9]{4}"
               required={true} // add this to everything except for the Github
               onChange={(v) => {
                 setInputs((values) => ({
                   ...values,
-                  discordId: v.target.value,
+                  discordUsername: v.target.value,
                 }));
               }}
             />
@@ -153,12 +158,12 @@ const RegisterForm = () => {
             Github Username:
             <input
               type="text"
-              name="githubId"
-              value={inputs.githubId}
+              name="githubUsername"
+              value={inputs.githubUsername}
               onChange={(v) => {
                 setInputs((values) => ({
                   ...values,
-                  githubId: v.target.value,
+                  githubUsername: v.target.value,
                 }));
               }}
             />
@@ -170,7 +175,7 @@ const RegisterForm = () => {
 
         {/* successfull registration */}
         {
-          successMsg &&
+          successMsg.status &&
           <div id="success" className={styles.popup}>
             <div className={styles.content}>
               <span className={styles.close} onClick={closePopup}>&times;</span>
@@ -185,9 +190,14 @@ const RegisterForm = () => {
                 src={require("../../assets/checked.png").default}
                   alt="checkmark"
                 />
-                <h1>Registered Successfully 🎉</h1>
+                <h1>Registered Successfully</h1>
+                <p
+                //  onClick={() => {console.log(successMsg.id)}}
+
+                onClick={() => {navigator.clipboard.writeText(`${successMsg.id}`)}}
+                className={styles.resgistrationID}>Registration ID: {successMsg.id}<span className={styles.resgistrationIDSpan}><img alt="copy" src="https://img.icons8.com/material-outlined/96/000000/copy.png"/></span></p>
                 <a href="https://discord.gg/2Dph95fvZW" rel="noreferrer" target="_blank">Join our Discord</a>
-                <p>Since hack night this year is an online event join our Discord to take part in it.</p>
+                <p>Since HackNight this year is an online event join our Discord to take part in it. Save the Registration ID for future references*</p>
               </div>
             </div>
           </div>
@@ -207,11 +217,11 @@ const RegisterForm = () => {
                 />
                 <img
                 className={styles.checked}
-                  src={require("../../assets/checked.png").default}
+                  src={require("../../assets/red-x.png").default}
                   alt="checkmark"
                 />
                 <h1>Registration Failed</h1>
-                <p>{errMsg.message}</p>
+                <p className={styles.errMsg}>{errMsg.message}</p>
               </div>
             </div>
           </div>
