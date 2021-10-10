@@ -5,6 +5,13 @@ import styles from "./styles.module.scss";
 const { REACT_APP_API } = process.env;
 
 const RegisterForm = () => {
+
+  const [errMsg, setErrMsg] = useState({
+    status: false,
+    message : ''
+  });
+  const [successMsg, setSuccessMsg] = useState(false);
+
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
@@ -18,23 +25,30 @@ const RegisterForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputs);
-
+    
     axios
-      .post(`${REACT_APP_API}/create/individual`, inputs)
-      .then((response) => console.log(response))
+    .post(`${REACT_APP_API}/create/individual`, inputs)
+    .then((response) => {
+      console.log(response);
+      // if success
+      // setSuccessMsg(true);
+  
+      // if false
+      // setErrMsg({
+      //   status: true,
+      //   message: "Something went wrong"
+      // });
+      })
       .catch((error) => console.log(error));
-
-    //popup
-    let popup = document.getElementById("popup");
-    // if the data is stored and everything is validated then show pop up
-    popup.style.display = "flex";
   };
 
   const closePopup = () => {
-  	let popup = document.getElementById('popup');
-  	popup.style.display = 'none';
+    setSuccessMsg(false);
+    setErrMsg({
+      status: false,
+      message: ""
+    });
   }
-  console.log(inputs);
 
   return (
     <Container>
@@ -154,27 +168,54 @@ const RegisterForm = () => {
           </div>
         </div>
 
-        {/* popup */}
-        <div id="popup" className={styles.popup}>
-          <div className={styles.content}>
-            <span className={styles.close} onClick={closePopup}>&times;</span>
-            <div className={styles.message}>
-              <img
-                className={styles.flower}
-                src={require("../../assets/small-flower.svg").default}
-                alt="flower"
-              />
-              <img
-              className={styles.checked}
+        {/* successfull registration */}
+        {
+          successMsg &&
+          <div id="success" className={styles.popup}>
+            <div className={styles.content}>
+              <span className={styles.close} onClick={closePopup}>&times;</span>
+              <div className={styles.message}>
+                <img
+                  className={styles.flower}
+                  src={require("../../assets/small-flower.svg").default}
+                  alt="flower"
+                  />
+                <img
+                className={styles.checked}
                 src={require("../../assets/checked.png").default}
-                alt="checkmark"
-              />
-              <h1>Registered Successfully 🎉</h1>
-              <a href="https://discord.gg/2Dph95fvZW" target="_blank">Join our Discord</a>
-              <p>Since hack night this year is an online event join our Discord to take part in it.</p>
+                  alt="checkmark"
+                />
+                <h1>Registered Successfully 🎉</h1>
+                <a href="https://discord.gg/2Dph95fvZW" rel="noreferrer" target="_blank">Join our Discord</a>
+                <p>Since hack night this year is an online event join our Discord to take part in it.</p>
+              </div>
             </div>
           </div>
-        </div>
+        }
+        
+        {/* failed registration */}
+        {
+          errMsg.status &&
+          <div id="fail" className={styles.popup}>
+            <div className={styles.content}>
+              <span className={styles.close} onClick={closePopup}>&times;</span>
+              <div className={styles.message}>
+                <img
+                  className={styles.flower}
+                  src={require("../../assets/small-flower.svg").default}
+                  alt="flower"
+                />
+                <img
+                className={styles.checked}
+                  src={require("../../assets/checked.png").default}
+                  alt="checkmark"
+                />
+                <h1>Registration Failed</h1>
+                <p>{errMsg.message}</p>
+              </div>
+            </div>
+          </div>
+        }
       </form>
     </Container>
   );
