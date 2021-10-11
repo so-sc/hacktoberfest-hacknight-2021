@@ -49,7 +49,7 @@ const Counter = () => {
   return (
     <div className={styles.counterBackground}>
       <h1 className={styles.counterText}>
-        HacktoberNight <span className={styles.thin}>starts in </span>
+        HackNight <span className={styles.thin}>starts in </span>
         {timerComponents.length ? timerComponents : <span>Event Started!</span>}
       </h1>
     </div>
