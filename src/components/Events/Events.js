@@ -18,7 +18,7 @@ const EventCard = ({item, index}) => {
 				<div className={styles.square}>
 					<img src={item.speakerImg} alt={`${item.speakerName}`} />
 				</div>
-				<p>{item.speakerName}</p>
+				<a href={item.speakerLink}>{item.speakerName}</a>
 			</div>
 		</li>
 	);
