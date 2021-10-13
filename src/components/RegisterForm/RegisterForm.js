@@ -2,10 +2,12 @@ import axios from "axios";
 import { React, useState } from "react";
 import Container from "../Container/Container";
 import styles from "./styles.module.scss";
+import loaderImage from '../../assets/loading.gif';
+
 const { REACT_APP_API } = process.env;
-
+console.log(REACT_APP_API)
 const RegisterForm = () => {
-
+  const [loader, setLoader] = useState(false);
   const [errMsg, setErrMsg] = useState({
     status: false,
     message : ''
@@ -26,25 +28,26 @@ const RegisterForm = () => {
   });
 
   const handleSubmit = (event) => {
+    setLoader(true);
     event.preventDefault();
-    console.log(inputs);
     
     axios
     .post(`${REACT_APP_API}/create/individual`, inputs)
     .then((response) => {
-      console.log(response);
       setSuccessMsg({
         status: true,
         id: response.data.id
       });
-      })
+    })
     .catch((error) => {
       console.log(error);
       setErrMsg({
         status: true,
         message: error.response.data.message
       });
-    });
+    })
+    .finally(() =>setLoader(false))
+
   };
 
   const closePopup = () => {
@@ -172,7 +175,12 @@ const RegisterForm = () => {
             <input type="submit" value="SUBMIT!" />
           </div>
         </div>
-
+          {
+            loader  && 
+            <div className={styles.loaderBG}>
+              <img className={styles.loader} src={loaderImage} alt="loader" />
+            </div>
+          }
         {/* successfull registration */}
         {
           successMsg.status &&

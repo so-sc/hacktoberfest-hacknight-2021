@@ -106,7 +106,24 @@
             }
         }
     }
+    .loaderBG{
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // background-color: pink;
+        min-width: 100%;
+        min-height: 100vh;
 
+
+        .loader{
+            
+            height: 100px;
+            width: 100px;
+        }
+    }
+    
     .popup {
         // display: none; /* Hidden by default */
         display: flex;
