@@ -144,7 +144,7 @@ const RegisterForm = () => {
               name="discordUsername"
               value={inputs.discordUsername}
               placeholder={"username#1234"}
-              pattern="[A-Za-z]*#[0-9]{4}"
+              pattern="[A-Za-z0-9]*#[0-9]{4}"
               required={true} // add this to everything except for the Github
               onChange={(v) => {
                 setInputs((values) => ({
