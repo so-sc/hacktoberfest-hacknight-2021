@@ -16,7 +16,7 @@ const TrackList = [
     },
     {
         title: 'ENTERTAINMENT',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra feugiat nibh natoque feugiat facilisi nisi. Sit commodo etiam turpis tortor integer at non consectetur.',
+        text: ' The Entertainment Challenge focuses on building an app around video, music, or gaming, but it can also be combined fairly easy with other options.',
         img: require('../../assets/tracks/entertainment.svg').default,
     },
 ]
