@@ -2,46 +2,59 @@
 @import '../../styles/abstract/variables.scss';
 @import '../../styles/base/base.scss';
 
-.contact {
-    background-color: $dark-green;
-    color: $background;
-    font-size: 2rem;
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px;
-        
-        @include respond(md) {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    }
-
-    .coloumn {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        padding: 10px;
-
-        a {
-            text-decoration: none;
-            color: $background;
-            padding: 10px;
-        }
-    
-        p {
-            padding: 10px;
-        }
-    }
-}
-
-.endline {
+footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: $orange;
-    height: 50px;
-    color: $background;
-    font-size: 2rem;
+
+    img {
+        max-width: 50rem;
+        padding: 2rem;
+    }
+    
+    .contact {
+        width: 100%;
+        background-color: $dark-green;
+        color: $background;
+        font-size: 2rem;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            
+            @include respond(md) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .coloumn {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 10px;
+
+            a {
+                text-decoration: none;
+                color: $background;
+                padding: 10px;
+            }
+        
+            p {
+                padding: 10px;
+            }
+        }
+    }
+
+    .endline {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $orange;
+        height: 50px;
+        color: $background;
+        font-size: 2rem;
+    }
 }

@@ -1,0 +1,78 @@
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/variables.scss';
+@import '../../styles/base/base.scss';
+
+.prizes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem 0rem;
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            color: $dark-green;
+            font-size: 4rem;
+            letter-spacing: 1rem;
+        }
+
+        img {
+            width: 40rem;
+
+            @include respond (xs) {
+                width: 100%;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        // flex-wrap: ;
+        margin: 5rem;
+        width: 100%;
+        max-width: 700px;
+        justify-content: space-between;
+
+        @include respond (md) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $light-green;
+            color: $dark-green;
+            width: 100%;
+            max-width: 300px;
+            height: 300px;
+            // border-radius: 1rem;
+
+            @include respond (md) {
+                margin-bottom: 5%;
+                // max-width: 100%;
+            }
+
+            h2 {
+                font-size: 4rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+                font-weight: 300;
+            }
+
+            img {
+                width: 80px;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}

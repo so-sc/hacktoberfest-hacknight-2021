@@ -1,6 +1,6 @@
 import Counter from '../components/Counter/Counter';
-import RegisterForm from '../components/RegisterForm/RegisterForm';
 import Container from '../components/Container/Container';
+import Rules from '../components/Rules/Rules';
 import Layout from '../components/Layout';
 
 const Register = () => (
@@ -8,7 +8,7 @@ const Register = () => (
     <Counter />
     <Layout>
         <Container>
-          <RegisterForm />
+            <Rules />
         </Container>
     </Layout>
   </div>

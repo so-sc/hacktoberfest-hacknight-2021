@@ -5,7 +5,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      
+      {/* <img src={require("../../assets/mini-banner.svg").default} alt="mini-banner" /> */}
       <div id="contact" className={styles.contact}>
         <Container>
           <div className={styles.container}>
