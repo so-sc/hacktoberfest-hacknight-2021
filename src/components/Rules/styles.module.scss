@@ -1,0 +1,45 @@
+@import '../../styles/abstract/mixins.scss';
+@import '../../styles/abstract/variables.scss';
+@import '../../styles/base/base.scss';
+
+.rules {
+    // text-align: center;
+    background-color: rgba(145,168,140,0.2);    
+    color: $dark-green;
+    padding: 4rem 7rem;
+    // max-width: 1300px;
+    // padding-left: 10rem;
+    border-radius: 1.5rem;
+    margin-bottom: 4rem;
+
+    @include respond(md) {
+        padding: 4rem;
+        // padding-left: 4rem;
+    }
+    
+    @include respond(xs) {
+        padding: 3rem;
+        // padding-left: 4rem;
+    }
+    // max-width: 900px;
+
+    h1 {
+        text-align: center;
+        font-size: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    ul {
+        padding-bottom: 2rem;
+
+        li {
+            font-size: 2rem;
+        
+            @include respond (md) {
+                list-style-position: inside;
+                // line-height: rem;
+            }
+
+        }
+    }
+}
