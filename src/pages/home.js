@@ -4,7 +4,7 @@ import About from '../components/About/About';
 import Stats from '../components/Stats/Stats';
 import Tracks from '../components/Tracks/Tracks';
 import Events from '../components/Events/Events';
-import Prizes from '../components/Prizes/Prizes';
+// import Prizes from '../components/Prizes/Prizes';
 import Sponsor from '../components/Sponsor/Sponsor';
 import Layout from '../components/Layout';
 
@@ -17,7 +17,7 @@ const Home = () => (
       <Stats />
       <Tracks />
       <Events />
-      <Prizes />
+      {/* <Prizes /> */}
       <Sponsor />
     </Layout>
   </div>
