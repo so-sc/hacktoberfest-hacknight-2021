@@ -14,10 +14,14 @@
     align-items: center;
     flex-direction: column;
 
-    h1 {
+    h1, h2 {
       color: $green;
       font-size: 3.5rem;
       text-align: center;
+    }
+    
+    h2 {
+      font-size: 3rem;
     }
 
     .sponsors {

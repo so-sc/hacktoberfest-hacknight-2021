@@ -25,12 +25,12 @@ const Sponsor = () => {
     <Container>
       <div className={styles.section}>
         <div className={styles.innerSection}>
-          <h1>OUR CURRENT SPONSORS</h1>
+          <h1>OUR SPONSORS AND PARTNERS</h1>
           <RenderSponsors item={curSponsorsList} />
         </div>
 
         <div className={styles.innerSection}>
-          <h1>OUR PREVIOUS SPONSORS</h1>
+          <h2>OUR PREVIOUS SPONSORS</h2>
           <RenderSponsors item={prevSponsorsList} />
         </div>
       </div>
