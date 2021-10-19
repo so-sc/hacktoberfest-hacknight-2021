@@ -1,7 +1,7 @@
-export const sponsorsList = [
+export const prevSponsorsList = [
     {
         title:'Github',
-        logo:require('../../assets/sponsors/github.png').default,
+        logo:require('../../assets/sponsors/github.svg').default,
         url:'https://github.com/',
         cName:'sponsor-member'
     },
@@ -29,7 +29,6 @@ export const sponsorsList = [
         url:'',
         cName:'sponsor-member'
     },
-   
     {
         title:'Matic',
         logo: require('../../assets/sponsors/matic.png').default,
@@ -70,6 +69,33 @@ export const sponsorsList = [
         title:'Give My Certificate',
         logo:require('../../assets/sponsors/GMC.png').default,
         url:'https://givemycertificate.com/',
+        cName:'sponsor-member'
+    },
+]
+
+export const curSponsorsList = [
+    {
+        title:'Clouds',
+        logo:require('../../assets/sponsors/clouds.png').default,
+        url:'',
+        cName:'sponsor-member'
+    },
+    {
+        title:'Balsamiq',
+        logo: require('../../assets/sponsors/balsamiq.png').default,
+        url:'https://balsamiq.com/',
+        cName:'sponsor-member'
+    },
+    {
+        title:'Vue School',
+        logo: require('../../assets/sponsors/vue-school.svg').default,
+        url:'https://vueschool.io/',
+        cName:'sponsor-member'
+    },
+    {
+        title:'Azure',
+        logo: require('../../assets/sponsors/axure.svg').default,
+        url:'https://www.axure.com/',
         cName:'sponsor-member'
     },
 ]
