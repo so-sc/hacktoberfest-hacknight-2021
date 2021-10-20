@@ -14,12 +14,12 @@ const Prizes = () => {
                 <div className={styles.content}>
                     <div className={styles.box}>
                         <img src={require("../../assets/1stPlace.svg").default} alt="" />
-                        <h2>$1000</h2>
+                        <h2>₹ 10,000</h2>
                         <h3>1st Place</h3>
                     </div>
                     <div className={styles.box}>
                         <img src={require("../../assets/2ndPlace.svg").default} alt="" />
-                        <h2>$500</h2>
+                        <h2>₹ 5,000</h2>
                         <h3>2nd Place</h3>
                     </div>
                 </div>

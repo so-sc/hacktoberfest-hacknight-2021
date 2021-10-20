@@ -88,7 +88,7 @@ export const curSponsorsList = [
     },
     {
         title:'Vue School',
-        logo: require('../../assets/sponsors/vue-school.svg').default,
+        logo: require('../../assets/sponsors/vue-school.jpeg').default,
         url:'https://vueschool.io/',
         cName:'sponsor-member'
     },
@@ -97,5 +97,17 @@ export const curSponsorsList = [
         logo: require('../../assets/sponsors/axure.svg').default,
         url:'https://www.axure.com/',
         cName:'sponsor-member'
+    },
+    {
+        title:'MHRD',
+        logo: require('../../assets/sponsors/mhrd.jpeg').default,
+        url:'',
+        cName:'sponsor-member'
+    },
+    {
+        title:'Staise',
+        logo: require('../../assets/sponsors/staise.png').default,
+        url:'',
+        cName:'Staise'
     },
 ]
