@@ -7,4 +7,20 @@ export const eventList = [
         speakerLink: 'https://github.com/swaaz',
         description:'Learning how to use GitHub is an essential skill that is used in a wide range of software development activities as well with a few management related activities. It can also be used a simple tool to host websites as well. Collaborative work is especially a lot more important in times like this, where we have to work from home and be in sync with our teams.',
     },
+    {
+        title:'Getting the Hacker Spirit',
+        date: '22nd Oct, 2:30 PM - 4:00 PM',
+        speakerName: 'Harsh B.',
+        speakerImg: require('../../assets/speakers/harsh.jpg').default,
+        speakerLink: 'https://www.linkedin.com/in/bajpaiharsh/',
+        description:'how bunch of hackers change the world and what can we learn from them i.e what is this hacker spirit that people keep talking about and how it gave birth to what is open-source',
+    },
+    // {
+    //     title:'Getting the Hacker Spirit',
+    //     date: '22nd Oct, 2:30 PM - 4:00 PM',
+    //     speakerName: 'Abhishek P',
+    //     speakerImg: require('../../assets/speakers/abhii.jpg').default,
+    //     speakerLink: 'https://www.linkedin.com/in/bajpaiharsh/',
+    //     description:'Learning how to use GitHub is an essential skill that is used in a wide range of software development activities as well with a few management related activities. It can also be used a simple tool to host websites as well. Collaborative work is especially a lot more important in times like this, where we have to work from home and be in sync with our teams.',
+    // },
 ]
