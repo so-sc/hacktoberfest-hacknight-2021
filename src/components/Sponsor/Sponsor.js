@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../Container/Container';
-import { prevSponsorsList, curSponsorsList } from './SponsorList'
+import { curSponsorsList } from './SponsorList'
 import styles from './styles.module.scss';
 
 const RenderSponsors = ({ item }) => {
@@ -9,10 +9,7 @@ const RenderSponsors = ({ item }) => {
       {item.map((item, index) => {
         return (
           <a href={item.url} key={index} >
-            {/* <li > */}
               <img src={item.logo} alt={item.title} />
-
-            {/* </li> */}
           </a>
         );
       })}
@@ -25,14 +22,14 @@ const Sponsor = () => {
     <Container>
       <div className={styles.section}>
         <div className={styles.innerSection}>
-          <h1>OUR SPONSORS AND PARTNERS</h1>
+          <h1>OUR SPONSORS</h1>
           <RenderSponsors item={curSponsorsList} />
         </div>
 
-        <div className={styles.innerSection}>
+        {/* <div className={styles.innerSection}>
           <h2>OUR PREVIOUS SPONSORS</h2>
           <RenderSponsors item={prevSponsorsList} />
-        </div>
+        </div> */}
       </div>
     </Container>
   );
