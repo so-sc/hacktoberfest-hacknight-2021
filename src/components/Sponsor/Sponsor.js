@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../Container/Container';
-import { prevSponsorsList, curSponsorsList } from './SponsorList'
+import { curSponsorsList } from './SponsorList'
 import styles from './styles.module.scss';
 
 const RenderSponsors = ({ item }) => {
