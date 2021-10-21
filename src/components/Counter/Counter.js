@@ -50,7 +50,11 @@ const Counter = () => {
     <div className={styles.counterBackground}>
       <h1 className={styles.counterText}>
         HackNight <span className={styles.thin}>starts in </span>
-        {timerComponents.length ? timerComponents : <span>Event Started!</span>}
+        {timerComponents.length ? (
+          timerComponents
+        ) : (
+          <span>Hacknight Started!</span>
+        )}
       </h1>
     </div>
   );
