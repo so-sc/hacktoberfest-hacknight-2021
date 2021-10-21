@@ -108,6 +108,18 @@ export const curSponsorsList = [
         title:'Staise',
         logo: require('../../assets/sponsors/staise.png').default,
         url:'',
-        cName:'Staise'
+        cName:'sponsor-member'
+    },
+    {
+        title:'IEEE',
+        logo: require('../../assets/sponsors/IEEE.png').default,
+        url:'',
+        cName:'sponsor-member'
+    },
+    {
+        title:'EC-Dept',
+        logo: require('../../assets/sponsors/ec-dept.jpeg').default,
+        url:'',
+        cName:'sponsor-member'
     },
 ]
