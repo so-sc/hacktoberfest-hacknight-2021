@@ -5,14 +5,14 @@ const Counter = () => {
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
 
-    const difference = +new Date(`10/23/${year}`) - +new Date();
+    const difference = +new Date(`10/23/${year} 09:00:00`) - +new Date();
 
     let timeLeft = {};
 
     if (difference > 0) {
       timeLeft = {
         d: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        h: Math.floor((difference / (1000 * 60 * 60)) % 29),
+        h: Math.floor((difference / (1000 * 60 * 60)) % 24),
         m: Math.floor((difference / 1000 / 60) % 60),
         s: Math.floor((difference / 1000) % 60),
       };
