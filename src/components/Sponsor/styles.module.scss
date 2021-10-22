@@ -2,57 +2,177 @@
 @import '../../styles/abstract/variables.scss';
 @import '../../styles/base/base.scss';
 
-.sponsors {
-  background-color: $light-green;
-  border-radius: 15px;
-  margin: 15rem 0rem 10rem;
-  padding: 50px 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  @include respond(md) {
-    padding: 50px 0px;
-  }
+.section {
+  margin: 10rem 0rem;
+  // background-color: white;
 
-  .flower {
-    width: 100px;
-    margin-top: -100px;
-  }
-
-  h1 {
-    font-size: 4rem;
-    color: $background;
-    text-align: center;
-    margin-bottom: 50px;
-
-    @include respond(md) {
-      font-size: 3rem;
-    }
-  }
-
-  .sponsorItem {
+  .innerSection {
+  
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
-    li {
-      list-style: none;
-      padding: 20px;
-
-      @include respond(md) {
-        padding: 15px;
-      }
+    h1, h2 {
+      color: $green;
+      font-size: 3.5rem;
+      text-align: center;
+    }
+    
+    h2 {
+      font-size: 3rem;
     }
 
-    img {
-      width: 150px;
+    .sponsors {
+      margin: 5rem 0rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
 
-      @include respond(md) {
-        width: 80px;
+      @include respond (sm) {
+        // flex-direction: column;
+        width: 100%;
+        gap: 1.5rem;
+        // background-color: black;
+      }
+      
+      @include respond (xs) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        // height: 100px;
+        // flex-basis: 1;
+      }
+      // flex-direction: column;
+      
+      a {
+        // border: 5px solid $orange;
+        // border: 5px solid $lighter-green;
+        box-shadow: rgba(160, 160, 160, 0.2) 0px 8px 24px;
+        // box-shadow: rgba(184, 205, 180, 0.3) 0px 8px 24px;
+        // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        // background-color: $light-green;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        width: 250px;
+        height: 100px;
+        // border: solid $dark-orange 2px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          background-color: $lighter-green;
+          // box-shadow: rgba(184, 205,180, 1) 0px 0px 0px 4px;
+        }
+      
+        @include respond (sm) {
+          // width: 100%;
+          flex-basis: 45%;
+          height: 100px;
+          // background-color: black;
+        }
+        
+        @include respond (xs) {
+          // width: 250px;
+          // background-color: black;
+          flex-basis: auto;
+          height: 100px;
+          // flex-basis: 50%;
+          // width: 100%;
+        }
+
+        img {
+          object-fit: contain;
+          // margin: 0rem 5rem;
+        
+          max-width: 140px;
+          max-height: 80px;
+          // margin: 0rem 3rem;
+          // object-fit: con;
+          
+          @include respond (sm) {
+            // width: 50rem;
+            max-width: 100%;
+            max-height: 100%;
+            
+          }
+          
+          @include respond (xs) {
+            // width: 50rem;
+            max-width: 130px;
+            max-height: 70px;
+            
+          }
+
+        }
       }
     }
   }
+
 }
+
+// .sponsor {
+//   margin: 8rem 0rem;
+
+//   h1 {
+//     font-size: 3.2rem;
+//     color: $dark-orange;
+//     text-align: center;
+//     // margin-bottom: 1rem;
+//     // letter-spacing: 1.5rem;
+//     word-spacing: 1rem;
+  
+//     // @include respond(md) {
+//     //   font-size: 3rem;
+//     // }
+//   }
+
+//   .sponsors {
+//     background-color: $light-green;
+//     border-radius: 15px;
+//     margin: 5rem 0rem 5rem;
+//     padding: 50px 100px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+  
+//     @include respond(md) {
+//       padding: 50px 0px;
+//     }
+  
+//     .flower {
+//       width: 8rem;
+//       margin-top: -9rem;
+//     }
+  
+//     .sponsorItem {
+//       display: flex;
+//       flex-wrap: wrap;
+//       justify-content: center;
+//       align-items: center;
+  
+//       li {
+//         list-style: none;
+//         padding: 20px;
+  
+//         @include respond(md) {
+//           padding: 15px;
+//         }
+//       }
+  
+//       img {
+//         width: 150px;
+  
+//         @include respond(md) {
+//           width: 80px;
+//         }
+//       }
+//     }
+//   }
+// }

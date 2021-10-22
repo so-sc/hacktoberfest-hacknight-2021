@@ -5,7 +5,7 @@ const Counter = () => {
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
 
-    const difference = +new Date(`10/22/${year}`) - +new Date();
+    const difference = +new Date(`10/23/${year} 09:00:00`) - +new Date();
 
     let timeLeft = {};
 
@@ -50,7 +50,11 @@ const Counter = () => {
     <div className={styles.counterBackground}>
       <h1 className={styles.counterText}>
         HackNight <span className={styles.thin}>starts in </span>
-        {timerComponents.length ? timerComponents : <span>Event Started!</span>}
+        {timerComponents.length ? (
+          timerComponents
+        ) : (
+          <span>Hacknight Started!</span>
+        )}
       </h1>
     </div>
   );
