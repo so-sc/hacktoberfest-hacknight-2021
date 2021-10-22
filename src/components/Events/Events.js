@@ -27,7 +27,7 @@ const EventCard = ({item, index}) => {
 const Events = () => {
 	return (
 		<div className={styles.events}>
-			<h1>EVENT</h1>
+			<h1>EVENTS</h1>
 			<Container>
 				<ul>
 					{eventList.map((item, index) => {
