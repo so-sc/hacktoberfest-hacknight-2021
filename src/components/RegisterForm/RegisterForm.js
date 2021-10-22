@@ -1,65 +1,67 @@
-import axios from "axios";
-import { React, useState } from "react";
-import { Link } from "react-router-dom";
+// import axios from "axios";
+import { React} from "react";
+// import { Link } from "react-router-dom";
 import styles from "./styles.module.scss";
-import loaderImage from '../../assets/loading.gif';
+// import loaderImage from '../../assets/loading.gif';
 
 const { REACT_APP_API } = process.env;
 console.log(REACT_APP_API)
 const RegisterForm = () => {
-  const [loader, setLoader] = useState(false);
-  const [errMsg, setErrMsg] = useState({
-    status: false,
-    message : ''
-  });
-  const [successMsg, setSuccessMsg] = useState({
-    status: false,
-    id: ''
-  });
+  // const [loader, setLoader] = useState(false);
+  // const [errMsg, setErrMsg] = useState({
+  //   status: false,
+  //   message : ''
+  // });
+  // const [successMsg, setSuccessMsg] = useState({
+  //   status: false,
+  //   id: ''
+  // });
 
-  const [inputs, setInputs] = useState({
-    name: "",
-    email: "",
-    college: "",
-    phone: "",
-    year: "",
-    discordUsername: "",
-    githubUsername: "",
-  });
+  // const [inputs, setInputs] = useState({
+  //   name: "",
+  //   email: "",
+  //   college: "",
+  //   phone: "",
+  //   year: "",
+  //   discordUsername: "",
+  //   githubUsername: "",
+  // });
 
-  const handleSubmit = (event) => {
-    setLoader(true);
-    event.preventDefault();
+  // const handleSubmit = (event) => {
+  //   setLoader(true);
+  //   event.preventDefault();
 
-    axios
-      .post(`${REACT_APP_API}/create/individual`, inputs)
-      .then((response) => {
-        setSuccessMsg({
-          status: true,
-          id: response.data.id
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-        setErrMsg({
-          status: true,
-          message: error.response.data.message
-        });
-      })
-      .finally(() => setLoader(false))
+  //   axios
+  //     .post(`${REACT_APP_API}/create/individual`, inputs)
+  //     .then((response) => {
+  //       setSuccessMsg({
+  //         status: true,
+  //         id: response.data.id
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       setErrMsg({
+  //         status: true,
+  //         message: error.response.data.message
+  //       });
+  //     })
+  //     .finally(() => setLoader(false))
 
-  };
+  // };
 
-  const closePopup = () => {
-    setSuccessMsg(false);
-    setErrMsg({
-      status: false,
-      message: ""
-    });
-  }
+  // const closePopup = () => {
+  //   setSuccessMsg(false);
+  //   setErrMsg({
+  //     status: false,
+  //     message: ""
+  //   });
+  // }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form} 
+    // onSubmit={handleSubmit}
+    >
       <div className={styles.innerContainer}>
         <div className={styles.heading}>
           <img
@@ -67,14 +69,14 @@ const RegisterForm = () => {
             src={require("../../assets/small-flower.svg").default}
             alt="small-flower"
           />
-          <h1>Registration!</h1>
+          <h1>Registration Closed :(</h1>
           <img
             className={styles.right}
             src={require("../../assets/small-flower.svg").default}
             alt="small-flower"
           />
         </div>
-        <div className={styles.rules}>Make sure to read the rules <Link to='/rules'>here</Link> before registering.</div>
+        {/* <div className={styles.rules}>Make sure to read the rules <Link to='/rules'>here</Link> before registering.</div>
         <label>
           Name:
           <input
@@ -174,16 +176,16 @@ const RegisterForm = () => {
         </label>
         <div className={styles.submit}>
           <input type="submit" value="SUBMIT!" />
-        </div>
+        </div> */}
       </div>
-      {
+      {/* {
         loader &&
         <div className={styles.loaderBG}>
           <img className={styles.loader} src={loaderImage} alt="loader" />
         </div>
-      }
+      } */}
       {/* successfull registration */}
-      {
+      {/* {
         successMsg.status &&
         <div id="success" className={styles.popup}>
           <div className={styles.content}>
@@ -210,10 +212,10 @@ const RegisterForm = () => {
             </div>
           </div>
         </div>
-      }
+      } */}
 
       {/* failed registration */}
-      {
+      {/* {
         errMsg.status &&
         <div id="fail" className={styles.popup}>
           <div className={styles.content}>
@@ -234,7 +236,7 @@ const RegisterForm = () => {
             </div>
           </div>
         </div>
-      }
+      } */}
     </form>
   );
 };
