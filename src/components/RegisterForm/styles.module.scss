@@ -2,6 +2,18 @@
 @import '../../styles/abstract/variables.scss';
 @import '../../styles/base/base.scss';
 
+.reg {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 4rem;
+        color: $dark-green;
+    }
+}
+
 .form {
     display: flex;
     justify-content: center;
