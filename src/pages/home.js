@@ -1,4 +1,4 @@
-import Counter from '../components/Counter/Counter';
+//import Counter from '../components/Counter/Counter';
 import Hero from '../components/Hero/Hero';
 import About from '../components/About/About';
 import Stats from '../components/Stats/Stats';
@@ -10,7 +10,7 @@ import Layout from '../components/Layout';
 
 const Home = () => (
   <div className='home'>
-    <Counter />
+    //<Counter />
     <Layout>
       <Hero />
       <About />
